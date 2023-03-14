@@ -21,12 +21,11 @@ def countFolderAndFilesLisst ():
             last_modified = os.path.getmtime(item_path)
             time_diff = now - last_modified
 
-            # check if the time difference is less than 7 day
             if time_diff < (7*24*60*60):
                 days_diff = int(time_diff / (24*60*60))
                 print(f'{item} in {item_path} was last modified {days_diff} days.')
 
-    print(f'Folders Count Number : {folderCount} Folders')
-    print(f'Files Count Number : {fileCount} Files')
+    print(f'Folders Count Number : {folderCount} folders')
+    print(f'Files Count Number : {fileCount} files')
 
 countFolderAndFilesLisst()
